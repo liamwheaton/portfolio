@@ -1,0 +1,41 @@
+@import 'variables.styl'
+
+*
+	box-sizing border-box
+	text-decoration none
+	color port-lb
+	background port-white
+body 
+	font-family body-font
+	margin 0
+p, li
+	line-height 1.5
+	
+// Header
+
+header
+	width 300px
+	margin 0 auto
+	h1
+		line-height 1.3
+	hr
+		width 8em
+		height 5px
+		background port-lb
+		border none
+		margin-left 0
+	nav
+		display flex
+		flex-direction column
+		a
+			font-weight 700
+			height 45px
+			padding-top 15px
+		.active
+			color port-db
+
+// Views
+
+.view
+	width 300px
+	margin 0 auto

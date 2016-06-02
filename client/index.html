@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" ng-controller="mainCtrl">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>{{ siteTitle }}</title>
+	<base href="/">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="assets/dist/style.min.css">
+</head>
+<body>
+	
+	<header>
+		<h1>Liam Wheaton. Graphic Design and Web Development Graduate.</h1>
+		<hr>
+		<nav>
+			<a ng-class="{active: activetab==='/'}" href="#/contact">Contact</a>
+			<a ng-class="{active: activetab==='/about'}" href="#/about">About</a>
+			<a ng-class="{active: activetab==='/web'}" href="#/web">Web</a>
+			<a ng-class="{active: activetab==='/graphic'}" href="#/graphic">Graphic</a>
+		</nav>
+	</header>
+
+	
+	<div ng-view></div>
+
+	<footer>
+		
+	</footer>
+	
+	<script src="assets/dist/libs.min.js"></script>
+	<script src="assets/dist/app.min.js"></script>
+	
+</body>
+</html>
