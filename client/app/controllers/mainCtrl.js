@@ -22,48 +22,103 @@ angular.module('app.controllers')
 	$window.on('scroll resize', check_if_in_view);
 	$window.trigger('scroll');
 
-	$('.picture').each(function() {
-		var $pic = $(this),
-			getItems = function() {
-				var items = [];
-				$pic.find('a').each(function() {
-					var $href = $(this).attr('href'),
-						$size = $(this).data('size').split('x'),
-						$width = $size[0],
-						$height = $size[1];
+	$('#dli').click(function () {
 
-					var item = {
-						src : $href,
-						w : $width,
-						h : $height
-					}
+		var pswpElement = $('.pswp')[0];
 
-					items.push(item);
-				});
-				return items;
+		var items = [ {
+				src: '../../assets/img/dli_1.png',
+				w: 524,
+				h: 744
+			},
+			{
+				src: '../../assets/img/dli_2.png',
+				w: 524,
+				h: 744
+			},
+			{
+				src: '../../assets/img/dli_3.png',
+				w: 524,
+				h: 744
+			},
+			{
+				src: '../../assets/img/dli_4.png',
+				w: 524,
+				h: 744
+			},
+			{
+				src: '../../assets/img/dli_5.png',
+				w: 744,
+				h: 524
+			},
+			{
+				src: '../../assets/img/dli_6.png',
+				w: 744,
+				h: 524
 			}
+		];
 
-		var items = getItems();
+		var options = {
 
-		var $pswp = $('.pswp')[0];
+			history: false,
+	      	focus: false,
 
-		$pic.on('click', 'figure', function(event) {
-			event.preventDefault();
+	        showAnimationDuration: 0,
+	        hideAnimationDuration: 0
 
-			var $index = $(this).index();
-			var options = {
-				index: $index,
-				bgOpacity: 0.7,
-				showHideOpacity: true,
-				counterEl: false,
-				tapToClose: true,
-				closeEl: true,
-				fullscreenE1: false,
-				shareE1: false
+		};
+
+		var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
+    	gallery.init();
+
+
+	});
+
+	$('#logo').click(function () {
+
+		var pswpElement = $('.pswp')[0];
+
+		var items = [ {
+				src: '../../assets/img/logo_1.png',
+				w: 600,
+				h: 635
+			},
+			{
+				src: '../../assets/img/logo_2.png',
+				w: 707,
+				h: 608
+			},
+			{
+				src: '../../assets/img/logo_3.png',
+				w: 690,
+				h: 609
+			},
+			{
+				src: '../../assets/img/logo_4.png',
+				w: 608,
+				h: 278
+			},
+			{
+				src: '../../assets/img/logo_5.png',
+				w: 612,
+				h: 609
 			}
-			var lightBox = new PhotoSwipe($pswp, PhotoSwipeUI_Default, items, options);
-			lightBox.init();
-		})
+		];
+
+		var options = {
+
+			history: false,
+	      	focus: false,
+
+	        showAnimationDuration: 0,
+	        hideAnimationDuration: 0
+
+		};
+
+		var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
+    	gallery.init();
+
+
 	});
 
 	$('.btt').click(function() {
