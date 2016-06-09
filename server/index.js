@@ -23,4 +23,4 @@ app.set('server', server);
 
 console.log('Listening on port 3000');
 
-app.get('server').listen(process.env.PORT || 3000);
+app.get('server').listen(process.env.PORT || 3001);
