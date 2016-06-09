@@ -38,6 +38,8 @@ var paths = {
 		'bower_components/lodash/lodash.min.js',
 		'bower_components/angular-simple-logger/dist/angular-simple-logger.min.js',
 		'bower_components/angular-cookies/angular-cookies.min.js',
+		'bower_components/photoswipe/dist/photoswipe.min.js',
+		'bower_components/photoswipe/dist/photoswipe-ui-default.min.js',
 		'bower_components/angular-messages/angular-messages.min.js'
 		
 	],
